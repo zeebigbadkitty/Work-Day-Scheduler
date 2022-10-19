@@ -4,20 +4,15 @@ var currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
 document.getElementById("currentDay").textContent = currentDay;
 
 
-// WHEN I view the timeblocks for that day
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+
+// Each timeblock is color coded to indicate whether it is in the past, present, or future (Check currentDay and add class)
 if (currentDay < moment('HH')){
-    // Past, Present, Future
 
 }
-// WHEN I click into a timeblock
-// THEN I can enter an event
-// WHEN I click the save button for that timeblock
+
+// I click the save button for that timeblock the text for that event is saved in local storage
+var saveBtn = document.getElementsByClassName("btn saveBtn col-md-2")
 var event=localStorage.getItem("event")
-
-// THEN the text for that event is saved in local storage
-localStorage.setitem "JSON STRINGIFY"
-// WHEN I refresh the page
-// THEN the saved events persist
-
-//if === add class "present"
+saveBtn.addEventListener("click", function() {
+      localStorage.setItem("event");
+    })
